@@ -1,0 +1,12 @@
+<html>
+    <body>
+        <script type="module">
+            import init from "./pkg/hello_wasm_canvas.js";
+            const run = async () => {
+                await init();
+            }
+            run();
+        </script>
+        <canvas id="canvas" />
+    </body>
+</html>
