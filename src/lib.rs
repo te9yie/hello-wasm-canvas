@@ -5,7 +5,14 @@ use wasm_bindgen::JsCast;
 pub fn main() {
     let window = web_sys::window().unwrap();
     let document = window.document().unwrap();
-    let canvas = document.get_element_by_id("canvas").unwrap();
+    let canvas = document
+        .create_element("canvas")
+        .unwrap()
+        .dyn_into::<web_sys::HtmlCanvasElement>()
+        .unwrap();
+    canvas.set_width(400);
+    canvas.set_height(400);
+    document.body().unwrap().append_child(&canvas).unwrap();
     let canvas = canvas.dyn_into::<web_sys::HtmlCanvasElement>().unwrap();
     let context = canvas.get_context("2d").unwrap();
     let context = context
