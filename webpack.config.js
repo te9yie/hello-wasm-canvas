@@ -13,4 +13,7 @@ module.exports = {
   devServer: {
     open: true,
   },
+  experiments: {
+    asyncWebAssembly: true,
+  },
 };
