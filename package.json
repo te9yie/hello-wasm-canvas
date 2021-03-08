@@ -1,0 +1,11 @@
+{
+  "name": "hello-wasm-canvas",
+  "version": "1.0.0",
+  "repository": "https://github.com/te9yie/hello-wasm-canvas",
+  "author": "te9yie <te9yie@users.noreply.github.com>",
+  "license": "MIT",
+  "scripts": {
+      "build": "wasm-pack build --target=web",
+      "serve": "npx serve"
+  }
+}
