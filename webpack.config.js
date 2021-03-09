@@ -3,7 +3,7 @@ const WasmPackPlugin = require("@wasm-tool/wasm-pack-plugin");
 
 module.exports = {
   mode: "development",
-  entry: "./index.js",
+  entry: "./pkg/index.js",
   plugins: [
     new HtmlWebpackPlugin(),
     new WasmPackPlugin({
